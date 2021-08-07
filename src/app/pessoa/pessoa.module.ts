@@ -10,6 +10,7 @@ import { ListarPessoaComponent } from './listar-pessoa/listar-pessoa.component';
 import { InserirPessoaComponent } from './inserir-pessoa/inserir-pessoa.component';
 import { EditarPessoaComponent } from './editar-pessoa/editar-pessoa.component';
 import { NgxMaskModule, IConfig } from 'ngx-mask';
+import { ModalPessoaComponent } from './modal-pessoa/modal-pessoa.component';
 export const options: Partial<IConfig> | (() => Partial<IConfig>) = {};
 
 @NgModule({
@@ -17,6 +18,7 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = {};
     ListarPessoaComponent,
     InserirPessoaComponent,
     EditarPessoaComponent,
+    ModalPessoaComponent,
   ],
   imports: [
     CommonModule,

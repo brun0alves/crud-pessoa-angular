@@ -16,12 +16,17 @@
             <td>{{pessoa.idade}}</td>
             <td>{{pessoa.dataNascimento | mask: 'd0/M0/0000'}}</td>
             <td class="text-center" style="width: 300px">
-                <a [routerLink]="['/pessoas/editar/',pessoa.id]" href="#" title="Editar" alt="Editar" class="btn btn-xs btn-info">
+                <a [routerLink]="['/pessoas/editar/',pessoa.id]" href="#" title="Editar" alt="Editar"
+                    class="btn btn-xs btn-info">
                     <i class="fa fa-edit" aria-hidden="true"></i> Editar
                 </a>&nbsp;
-                <a (click)="excluir($event, pessoa)" href="#" title="Remover" alt="Remover" class="btn btn-xs btn-danger">
+                <a (click)="excluir($event, pessoa)" href="#" title="Remover" alt="Remover"
+                    class="btn btn-xs btn-danger">
                     <i class="fa fa-times" aria-hidden="true"></i> Remover
-                </a>
+                </a>&nbsp;
+                <button type="button" class="btn btn-xs btn-info" (click)="abrirModalPessoa(pessoa)">
+                    <i class="fa fa-eye" aria-hidden="true"></i> Ver
+                </button>
             </td>
         </tr>
     </tbody>
