@@ -8,9 +8,13 @@
             <div *ngIf="nome.errors && (nome.dirty || nome.touched)" class="alert alert-danger">
                 <div [hidden]="!nome.errors.required">Digite o nome da cidade.</div>
                 <div [hidden]="!nome.errors.minlength">
-                    A cidade deve conter ao menos 3 caracteres.
+                    O nome deve conter ao menos 3 caracteres.
                 </div>
             </div>
+            <label for="estado">Estado:</label>
+            <ng-select name="estado" id="estado" [items]="estados" bindLabel="sigla" [(ngModel)]="cidade.estado"
+                placeholder="Selecione um estado">
+            </ng-select>
         </div><br>
         <div class="row">
             <button type="button" class="btn btn-primary" (click)="inserir()" [disabled]="!formCidade.form.valid">

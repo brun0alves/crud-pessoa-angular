@@ -2,7 +2,9 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Cidade } from '../../shared/models/cidade.model';
+import { Estado } from '../../shared/models/estado.model';
 import { CidadeService } from '../services/cidade.service';
+import { EstadoService } from '../../estado/services/estado.service';
 
 @Component({
   selector: 'app-editar-cidade',
@@ -13,15 +15,18 @@ export class EditarCidadeComponent implements OnInit {
   @ViewChild('formCidade') formCidade!: NgForm;
 
   cidade!: Cidade;
+  estados!: Estado[];
 
   constructor(
     private cidadeService: CidadeService,
+    private estadoService: EstadoService,
     private routerParams: ActivatedRoute,
     private router: Router
   ) {}
 
   ngOnInit(): void {
     this.buscarCidade();
+    this.estados = this.estadoService.listarTodos();
   }
 
   buscarCidade(): void {

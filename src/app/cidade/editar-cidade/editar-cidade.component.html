@@ -12,6 +12,12 @@
                 </div>
             </div>
         </div><br>
+        <div class="form-group">
+            <label for="estado">Estado:</label>
+            <ng-select name="estado" [items]="estados" bindLabel="nome" [(ngModel)]="cidade.estado"
+                placeholder="Selecione um estado">
+            </ng-select>
+        </div><br>
         <div class="row">
             <button type="button" class="btn btn-primary" (click)="atualizar()" [disabled]="!formCidade.form.valid">
                 <i class="fa fa-save" aria-hidden="true"></i> Salvar

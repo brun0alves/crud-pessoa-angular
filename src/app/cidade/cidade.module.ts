@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { ListarCidadeComponent } from './listar-cidade/listar-cidade.component';
 import { EditarCidadeComponent } from './editar-cidade/editar-cidade.component';
 import { InserirCidadeComponent } from './inserir-cidade/inserir-cidade.component';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,6 @@ import { InserirCidadeComponent } from './inserir-cidade/inserir-cidade.componen
     EditarCidadeComponent,
     InserirCidadeComponent
   ],
-  imports: [CommonModule, SharedModule, RouterModule, FormsModule],
+  imports: [CommonModule, SharedModule, RouterModule, FormsModule, NgSelectModule],
 })
 export class CidadeModule { }
