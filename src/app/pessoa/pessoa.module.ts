@@ -30,3 +30,14 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = {};
   providers: [PessoaService],
 })
 export class PessoaModule {}
+
+
+/*
+public get usuarioLogado(): Usuario | null {
+let usu = localStorage[LS_CHAVE];
+return (usu ? JSON.parse(localStorage[LS_CHAVE]) : null);
+} 
+
+public set usuarioLogado(usuario: Usuario | null) {
+localStorage[LS_CHAVE] = JSON.stringify(usuario);
+}*/
